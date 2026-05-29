@@ -6,13 +6,14 @@
 
 - 篇目为《两小儿辩日》。
 - 出处记录为《列子·汤问》。
-- 当前最近任务为 `WENYAN-SMOKE-008-PHASE7-RUN`。
-- 当前阶段为 Phase 7。
+- 当前最近任务为 `WENYAN-SMOKE-009-PHASE8-RUN`。
+- 当前阶段为 Phase 8。
 - 当前产物只用于烟测，不是最终生产稿。
 - Phase 4 草案已完成一次烟测修订，仍不代表正式生产稿。
 - Phase 5 教学与生产审查已完成，报告见 `reviews/phase5-teaching-production-review.md`。
 - Phase 6 已完成轻量修订，只处理 P2，仍不代表正式生产稿。
-- Phase 7 已完成锁稿前审查，具备进入 Phase 8 锁稿计划制定的条件，但仍未锁稿。
+- Phase 7 已完成锁稿前审查，具备进入 Phase 8 锁稿计划制定的条件。
+- Phase 8 已完成剧本文本锁稿，当前主线剧本创作链路已完成。
 
 ## 原文事实
 
@@ -68,6 +69,23 @@
 - 未生成正式字幕、正式分镜、视频提示词、Seedance prompts、图像提示词或生产稿包。
 - 下一步建议执行 `WENYAN-SMOKE-009-PHASE8-PLAN`，只制定锁稿计划，不直接锁稿。
 
+## Phase 8 剧本文本锁稿记忆
+
+- Phase 8 锁稿已完成。
+- 任务：`WENYAN-SMOKE-009-PHASE8-RUN`。
+- 锁稿审查报告：`reviews/final-review.md`。
+- 锁定剧本文本：`locked/FINAL-SCRIPT.md`。
+- 锁稿 manifest：`locked/LOCK-MANIFEST.sha256`。
+- Skill 锁定 manifest：`locked/SKILL-LOCK-MANIFEST.sha256`。
+- final-review 结论：允许锁稿。
+- P0：0。
+- P1：0。
+- P2：1，教材版本、目标年级和最终时长仍需正式化前由用户确认。
+- 剩余 P2 已接受为非阻塞项。
+- 当前主线剧本创作链路已完成。
+- 后续分镜提示词 / Seedance2.0 提示词应另开 Skill 或独立任务，不属于当前 `wenyan-skill` 剧本创作链路。
+- 不得自动进入视频生产阶段。
+
 ## 视频风险记忆
 
 - 儿童角色多镜头稳定性风险。
@@ -78,8 +96,8 @@
 ## 禁止事项
 
 - 不把 `SMOKE-DRAFT.md` 当作最终剧本。
-- 不生成 `locked/FINAL-SCRIPT.md`。
-- 不生成 `reviews/final-review.md`。
+- 不重复生成或覆盖 `locked/FINAL-SCRIPT.md`。
+- 不重复生成或覆盖 `reviews/final-review.md`。
 - 不生成正式字幕、正式分镜或视频提示词。
-- 不进入 Phase 8，除非用户后续明确确认。
+- 不进入分镜提示词、Seedance2.0 提示词或视频生产阶段，除非用户后续明确确认并另开任务。
 - 不为通过校验补旧小说 / 剧本规划文件。

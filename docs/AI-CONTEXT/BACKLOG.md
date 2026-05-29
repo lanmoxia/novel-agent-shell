@@ -280,12 +280,20 @@
 - 验收标准：明确是否允许进入真正锁稿、锁稿前必须确认的教材版本 / 目标年级 / 最终时长、允许和禁止生成内容、成功标准、回滚或暂停规则，以及后续执行任务建议。
 - 备注：2026-05-29 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-009-PHASE8-PLAN.md`。本轮只制定 Phase 8 锁稿计划，未执行 Phase 8，未生成 `locked/FINAL-SCRIPT.md`、`reviews/final-review.md`、锁稿 manifest、正式字幕、正式分镜、视频提示词或生产稿包；下一步需等待用户确认是否执行 `WENYAN-SMOKE-009-PHASE8-RUN`。
 
-### [ ] WENYAN-SMOKE-009-PHASE8-RUN：按用户确认范围执行 Phase 8 锁稿
+### [x] WENYAN-SMOKE-009-PHASE8-RUN：按用户确认范围执行 Phase 8 锁稿
 
 - 目标：在用户确认后，按 `WENYAN-SMOKE-009-PHASE8-PLAN` 执行 Phase 8 锁稿，验证文言文教辅短剧剧本创作链路的锁稿能力。
 - 修改范围：待用户确认后再限定；候选范围最多包括 `locked/FINAL-SCRIPT.md`、锁稿 manifest、必要的项目状态文件和 AI-CONTEXT 状态文件。
 - 禁止范围：不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或完整生产稿包；不得修改模板、Skill、workflow 或仓库级 scripts；不得进入视频生产链路。
 - 验收标准：锁稿对象、锁稿产物、状态更新、剩余 P2 处理、校验结果和 Git 提交推送结果均可追溯；不得生成未获确认的后置生产产物。
+- 备注：2026-05-29 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-009-PHASE8-RUN.md`。本轮新增 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256` 和 `locked/SKILL-LOCK-MANIFEST.sha256`；剧本文本创作链路已完成锁稿，未生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或生产稿包。
+
+### [ ] WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE：冻结剧本创作链路完成状态，明确不进入分镜 / Seedance / 视频生产
+
+- 目标：在 Phase 8 剧本文本锁稿完成后，冻结当前主线完成状态，明确本轮只完成文言文教辅短剧剧本创作链路验证，不自动进入分镜提示词、Seedance2.0 提示词或视频生产链路。
+- 修改范围：待用户确认后再限定；候选范围应优先限于项目状态说明、AI-CONTEXT 状态文件和必要归档，不生成新创作内容。
+- 禁止范围：不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或完整生产稿包；不得修改模板、Skill、workflow 或仓库级 scripts。
+- 验收标准：当前剧本链路完成状态被清楚冻结；后续如需分镜 / Seedance / 视频生产，必须另开任务或 Skill；不产生新的生产资产。
 
 ### [x] TEMPLATE-001：评估 projects/_template 是否需要教辅短剧版本
 

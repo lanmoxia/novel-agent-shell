@@ -3,9 +3,9 @@
   "projectType": "edu-shortdrama",
   "skillId": "wenyan-skill",
   "skillVersion": "0.1.0",
-  "phase": 7,
-  "status": "phase7_prelock_review_created",
-  "locked": false,
+  "phase": 8,
+  "status": "phase8_locked",
+  "locked": true,
   "confirmedArtifacts": {
     "projectMd": true,
     "genreSkillLock": true,
@@ -19,19 +19,24 @@
     "subtitlePlan": false,
     "shotlistPlan": false,
     "teachingReview": true,
-    "finalReview": false,
+    "finalReview": true,
     "revisionLog": false,
-    "finalScript": false,
+    "finalScript": true,
     "productionPackage": false
   },
   "eduTextStatus": "completed_smoke",
   "sceneMappingStatus": "completed_smoke",
-  "scriptStatus": "phase6_light_revision_completed",
+  "scriptStatus": "phase8_locked",
   "subtitleStatus": "not_generated",
   "shotlistStatus": "not_generated",
-  "reviewStatus": "phase7_prelock_review_created",
+  "reviewStatus": "final_review_created",
   "productionPackageStatus": "not_generated",
-  "lockedArtifacts": [],
+  "lockedArtifacts": [
+    "reviews/final-review.md",
+    "locked/FINAL-SCRIPT.md",
+    "locked/LOCK-MANIFEST.sha256",
+    "locked/SKILL-LOCK-MANIFEST.sha256"
+  ],
   "lastUpdated": "2026-05-29",
   "notes": [
     "Recovery task created Phase 0-4 smoke files after prior 503 interruption.",
@@ -54,6 +59,10 @@
     "Phase 7 prelock review created; current draft meets conditions to enter Phase 8 lock plan.",
     "Residual issues after Phase 7 prelock review: P0=0, P1=0, P2=1.",
     "Remaining P2: textbook version, target grade, and final duration still need user confirmation before formalization.",
-    "No Phase 8 execution; no final review, FINAL-SCRIPT, formal subtitles, formal shotlist, video prompts, Seedance prompts, image prompts, lock manifests, or production package generated."
+    "No Phase 8 execution; no final review, FINAL-SCRIPT, formal subtitles, formal shotlist, video prompts, Seedance prompts, image prompts, lock manifests, or production package generated.",
+    "Phase 8 script text lock completed.",
+    "Final review result: P0=0, P1=0, P2=1.",
+    "Remaining P2 accepted as non-blocking: textbook version, target grade, and final duration still need confirmation before formalization.",
+    "No subtitles, formal shotlist, video prompts, Seedance prompts, image prompts, or production package generated."
   ]
 }
