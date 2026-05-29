@@ -1,0 +1,32 @@
+{
+  "projectType": "edu-shortdrama",
+  "skillId": "wenyan-skill",
+  "phase": 0,
+  "status": "initializing",
+  "confirmedArtifacts": {
+    "projectMd": false,
+    "genreSkillLock": false,
+    "storySpec": false,
+    "endingLock": false,
+    "outline": false,
+    "originalTextAnalysis": false,
+    "sceneMapping": false,
+    "script": false,
+    "subtitlePlan": false,
+    "shotlistPlan": false,
+    "teachingReview": false,
+    "revisionLog": false,
+    "finalScript": false,
+    "productionPackage": false
+  },
+  "eduTextStatus": "not_started",
+  "sceneMappingStatus": "not_started",
+  "scriptStatus": "not_started",
+  "subtitleStatus": "not_started",
+  "shotlistStatus": "not_started",
+  "reviewStatus": "not_started",
+  "productionPackageStatus": "not_started",
+  "lockedArtifacts": [],
+  "lastUpdated": null,
+  "notes": []
+}

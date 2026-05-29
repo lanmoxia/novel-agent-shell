@@ -1,0 +1,20 @@
+{
+  "project": "huanghe-minsu-horror-001",
+  "phase": 7,
+  "status": "locked",
+  "genreSkill": "huanghe-minsu-suspense-skill",
+  "genreSkillVersion": "1.0.0",
+  "locked": true,
+  "confirmedArtifacts": {
+    "projectMd": true,
+    "genreSkillLock": true,
+    "storySpec": true,
+    "endingLock": true,
+    "outline": true,
+    "reverseOutline": true,
+    "finalReview": true,
+    "revisionLog": true,
+    "finalScript": true
+  },
+  "notes": "已锁稿历史项目。该 JSON 用于后续壳子恢复与校验。"
+}

@@ -1,0 +1,20 @@
+{
+  "project": "待填写",
+  "phase": 0,
+  "status": "initializing",
+  "genreSkill": "待选择",
+  "genreSkillVersion": "待填写",
+  "locked": false,
+  "confirmedArtifacts": {
+    "projectMd": false,
+    "genreSkillLock": false,
+    "storySpec": false,
+    "endingLock": false,
+    "outline": false,
+    "reverseOutline": false,
+    "finalReview": false,
+    "revisionLog": false,
+    "finalScript": false
+  },
+  "notes": "项目初始化状态。Markdown 仍为人类主视图，JSON 用于校验与恢复。"
+}

@@ -1,0 +1,10 @@
+workflow/settings.json
+workflow/settings.local.json
+.claude/
+.DS_Store
+node_modules/
+dist/
+*.log
+*.tmp
+projects/*/tmp/
+projects/*/.cache/
