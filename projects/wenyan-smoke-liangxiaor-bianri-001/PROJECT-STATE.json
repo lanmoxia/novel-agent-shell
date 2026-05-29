@@ -3,8 +3,8 @@
   "projectType": "edu-shortdrama",
   "skillId": "wenyan-skill",
   "skillVersion": "0.1.0",
-  "phase": 6,
-  "status": "phase6_light_revision_completed",
+  "phase": 7,
+  "status": "phase7_prelock_review_created",
   "locked": false,
   "confirmedArtifacts": {
     "projectMd": true,
@@ -29,7 +29,7 @@
   "scriptStatus": "phase6_light_revision_completed",
   "subtitleStatus": "not_generated",
   "shotlistStatus": "not_generated",
-  "reviewStatus": "phase5_review_created",
+  "reviewStatus": "phase7_prelock_review_created",
   "productionPackageStatus": "not_generated",
   "lockedArtifacts": [],
   "lastUpdated": "2026-05-29",
@@ -50,6 +50,10 @@
     "No Phase 7 or Phase 8 execution; no final review, lock artifacts, formal subtitles, formal shotlist, video prompts, Seedance prompts, image prompts, or production package generated.",
     "Phase 6 validation passed with 0 error and 0 warning in Bash and PowerShell.",
     "Next recommended task: WENYAN-SMOKE-007-REVIEW.",
-    "Existing active project validators may still expect legacy novel planning files; record validation failures without modifying scripts or templates."
+    "Existing active project validators may still expect legacy novel planning files; record validation failures without modifying scripts or templates.",
+    "Phase 7 prelock review created; current draft meets conditions to enter Phase 8 lock plan.",
+    "Residual issues after Phase 7 prelock review: P0=0, P1=0, P2=1.",
+    "Remaining P2: textbook version, target grade, and final duration still need user confirmation before formalization.",
+    "No Phase 8 execution; no final review, FINAL-SCRIPT, formal subtitles, formal shotlist, video prompts, Seedance prompts, image prompts, lock manifests, or production package generated."
   ]
 }

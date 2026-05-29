@@ -1,5 +1,26 @@
 # 运行记录
 
+## 2026-05-29 WENYAN-SMOKE-008-PHASE7-RUN
+
+- 任务：按用户确认范围执行 Phase 7 锁稿前审查。
+- 当前阶段：Phase 7。
+- 当前状态：Phase 7 锁稿前审查已完成，等待 `WENYAN-SMOKE-009-PHASE8-PLAN` 制定锁稿计划。
+- 审查报告：`reviews/phase7-prelock-review.md`。
+- 审查结论：通过锁稿前审查，具备进入 Phase 8 锁稿计划制定的条件。
+- P0：0。
+- P1：0。
+- P2：1，教材版本、目标年级和最终时长仍需正式化前由用户确认。
+- 未生成：`reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、正式字幕、正式分镜、视频提示词、Seedance prompts、图像提示词、锁稿 manifest 或完整生产稿包。
+- 未进入：Phase 8。
+- 未修改：模板、Skill、workflow 或仓库级 scripts。
+- 未补旧小说规划文件。
+- 校验记录：
+  - `bash scripts/validate-edu-shortdrama-project.sh`：通过，0 error / 0 warning。
+  - `bash scripts/validate-shell.sh`：通过，0 error / 0 warning。
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-edu-shortdrama-project.ps1`：通过，0 error / 0 warning。
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/validate-shell.ps1`：通过，0 error / 0 warning。
+- 下一步：`WENYAN-SMOKE-009-PHASE8-PLAN`。
+
 ## 2026-05-29 WENYAN-SMOKE-006-PHASE6-RUN
 
 - 任务：按用户确认范围执行 Phase 6 轻量修订。

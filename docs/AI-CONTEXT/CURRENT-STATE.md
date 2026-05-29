@@ -53,6 +53,7 @@
 - `WENYAN-SMOKE-006-PHASE6-RUN` 已完成，已按用户确认范围执行 Phase 6 轻量修订并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-006-PHASE6-RUN.md`；本轮只处理 3 个 P2，未进入 Phase 7 / 8，未生成正式产物，Bash / PowerShell 校验均通过 0 error / 0 warning。
 - `WENYAN-SMOKE-007-REVIEW` 已完成，已复核 Phase 6 轻量修订结果并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-007-REVIEW.md`；复核结论为 P0=0、P1=0，仅剩不阻塞的 P2，建议下一步制定 Phase 7 锁稿前审查计划。
 - `WENYAN-SMOKE-008-PHASE7-PLAN` 已完成，已制定 Phase 7 锁稿前审查计划并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-008-PHASE7-PLAN.md`；本轮未执行 Phase 7，未修改 `PROJECT-STATE.json`，未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、正式字幕、正式分镜、视频提示词或生产稿包。
+- `WENYAN-SMOKE-008-PHASE7-RUN` 已完成，已生成 Phase 7 锁稿前审查报告并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-008-PHASE7-RUN.md`；审查结论为 P0=0、P1=0、P2=1，具备进入 Phase 8 锁稿计划制定的条件；本轮未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、正式字幕、正式分镜、视频提示词或生产稿包。
 
 ## 当前暂停事项
 
@@ -68,16 +69,16 @@
 - `wenyan-skill` 已按新合约补强 `version`、`capabilities`、`fallbackRules` 和 `shellBoundary` 元数据。
 - 旧项目校验已能跳过 `projects/_template-edu-shortdrama/`，不会再把教辅模板当成真实项目目录检查。
 - 教辅模板已有专用校验脚本，并已接入 Bash / PowerShell 顶层 `validate-shell`。
-- 当前校验链路已覆盖教辅模板结构、教辅字段、真实教辅项目实例和生产稿包边界；真实教辅烟测项目已创建并补齐 Phase 0-4 文件，且已通过匹配其语义的校验。Phase 5 教学与生产审查已经完成，Phase 6 轻量修订及复核已经完成，Phase 7 锁稿前审查计划已经完成；当前主要问题是等待用户确认是否执行 Phase 7 锁稿前审查。
+- 当前校验链路已覆盖教辅模板结构、教辅字段、真实教辅项目实例和生产稿包边界；真实教辅烟测项目已创建并补齐 Phase 0-4 文件，且已通过匹配其语义的校验。Phase 5 教学与生产审查已经完成，Phase 6 轻量修订及复核已经完成，Phase 7 锁稿前审查已经完成；当前主要问题是等待用户确认是否制定 Phase 8 锁稿计划。
 - 顶层 `validate-shell.*` 仍保留既有 `.claude/` 探测 warning 逻辑；`VALIDATE-005` 未扩大该探测边界。
 - `projects/_template` 仍作为旧小说 / 剧本模板保留，未被本轮改动。
 - 长期优化任务需要按编号推进，每次只执行一个任务，避免上下文漂移和范围扩大。
 
 ## 下一步建议
 
-建议下一步执行 `BACKLOG.md` 中的 `WENYAN-SMOKE-008-PHASE7-RUN`：按用户确认范围执行 Phase 7 锁稿前审查。
+建议下一步执行 `BACKLOG.md` 中的 `WENYAN-SMOKE-009-PHASE8-PLAN`：制定进入 Phase 8 锁稿计划。
 
-当前不得自动进入 Phase 7 / 8；后续必须等待用户确认后，才可执行 Phase 7 锁稿前审查。Phase 7 只判断是否具备锁稿条件，不得直接锁稿。
+当前不得自动进入 Phase 8；后续必须等待用户确认后，才可制定或执行 Phase 8 锁稿相关任务。Phase 7 只完成锁稿前审查，不代表已经锁稿。
 
 ## 禁止事项
 
