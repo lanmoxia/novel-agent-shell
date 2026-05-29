@@ -288,12 +288,21 @@
 - 验收标准：锁稿对象、锁稿产物、状态更新、剩余 P2 处理、校验结果和 Git 提交推送结果均可追溯；不得生成未获确认的后置生产产物。
 - 备注：2026-05-29 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-009-PHASE8-RUN.md`。本轮新增 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256` 和 `locked/SKILL-LOCK-MANIFEST.sha256`；剧本文本创作链路已完成锁稿，未生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或生产稿包。
 
-### [ ] WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE：冻结剧本创作链路完成状态，明确不进入分镜 / Seedance / 视频生产
+### [x] WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE：冻结剧本创作链路完成状态，明确不进入分镜 / Seedance / 视频生产
 
 - 目标：在 Phase 8 剧本文本锁稿完成后，冻结当前主线完成状态，明确本轮只完成文言文教辅短剧剧本创作链路验证，不自动进入分镜提示词、Seedance2.0 提示词或视频生产链路。
 - 修改范围：待用户确认后再限定；候选范围应优先限于项目状态说明、AI-CONTEXT 状态文件和必要归档，不生成新创作内容。
 - 禁止范围：不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或完整生产稿包；不得修改模板、Skill、workflow 或仓库级 scripts。
 - 验收标准：当前剧本链路完成状态被清楚冻结；后续如需分镜 / Seedance / 视频生产，必须另开任务或 Skill；不产生新的生产资产。
+- 备注：2026-05-29 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE.md`。当前主线文言文教辅短剧剧本创作链路已完成锁稿并收束；未修改烟测项目文件，未生成字幕、分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或生产稿包。
+
+### [ ] VIDEO-SKILL-001-PLAN：规划分镜 / Seedance2.0 提示词 Skill
+
+- 目标：在用户另行明确确认后，规划独立的分镜 / Seedance2.0 提示词 Skill，不把视频生产链路并入当前 `wenyan-skill` 剧本创作验证链路。
+- 修改范围：待用户确认后再限定；候选范围应优先限于计划归档和必要 AI-CONTEXT 状态文件。
+- 禁止范围：未确认前不得执行；不得自动生成正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或完整生产稿包；不得修改当前已锁稿剧本资产。
+- 验收标准：明确新 Skill 的职责、输入、输出、禁止产物、验证方式和与 `wenyan-skill` 剧本链路的边界。
+- 备注：待用户另行确认后才可启动；当前未启动。
 
 ### [x] TEMPLATE-001：评估 projects/_template 是否需要教辅短剧版本
 
