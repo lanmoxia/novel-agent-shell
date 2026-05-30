@@ -1,5 +1,133 @@
 # 运行记录
 
+## 2026-05-30 WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE
+
+- 任务编号：WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE
+- 任务：冻结《司马光》剧本创作链路完成状态。
+- 当前阶段：Phase 8 locked + script creation boundary frozen。
+- 当前状态：剧本文本已锁稿，剧本创作链路完成状态已冻结。
+
+## 本轮读取范围
+
+- `docs/AI-CONTEXT/README.md`
+- `docs/AI-CONTEXT/CURRENT-STATE.md`
+- `docs/AI-CONTEXT/BACKLOG.md`
+- `docs/AI-CONTEXT/LAST-TASK.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-PLAN.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW.md`
+- `docs/AI-CONTEXT/archive/WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE.md`
+- `projects/wenyan-generalize-sima-guang-001/PROJECT-STATE.json`
+- `projects/wenyan-generalize-sima-guang-001/PROJECT-MEMORY.md`
+- `projects/wenyan-generalize-sima-guang-001/RUN-LOG.md`
+- `projects/wenyan-generalize-sima-guang-001/reviews/final-review.md`
+- `projects/wenyan-generalize-sima-guang-001/locked/FINAL-SCRIPT.md`
+- `projects/wenyan-generalize-sima-guang-001/locked/LOCK-MANIFEST.sha256`
+- `projects/wenyan-generalize-sima-guang-001/locked/SKILL-LOCK-MANIFEST.sha256`
+- `projects/wenyan-smoke-liangxiaor-bianri-001/reviews/final-review.md`
+- `projects/wenyan-smoke-liangxiaor-bianri-001/locked/FINAL-SCRIPT.md`
+- `genre-skills/wenyan-skill/SKILL.md`
+
+未读取 `C:\Users\Administrator\.codex\memories\MEMORY.md`、`.claude/` 或 `workflow/settings*.json`。
+
+## 本轮新增文件
+
+- `reviews/script-creation-boundary-freeze.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE.md`
+
+## 本轮修改文件
+
+- `PROJECT-STATE.json`
+- `PROJECT-MEMORY.md`
+- `RUN-LOG.md`
+- `docs/AI-CONTEXT/LAST-TASK.md`
+- `docs/AI-CONTEXT/CURRENT-STATE.md`
+- `docs/AI-CONTEXT/BACKLOG.md`
+
+## 冻结结论
+
+- 《司马光》Phase 8 剧本文本已锁稿。
+- 剧本创作链路完成状态已冻结。
+- 本轮未修改 `locked/FINAL-SCRIPT.md`。
+- 本轮未修改 `locked/LOCK-MANIFEST.sha256` 或 `locked/SKILL-LOCK-MANIFEST.sha256`。
+- 本轮未修改 `reviews/final-review.md`。
+- `PROJECT-STATE.json` 已记录 `scriptCreationBoundaryStatus: frozen`。
+
+## 冻结范围
+
+- 只冻结剧本创作链路完成状态。
+- 只更新项目状态、项目记忆、运行日志、冻结报告和 AI-CONTEXT。
+- 不重写剧本，不重新生成 manifest，不进入视频链路。
+
+## 未完成范围
+
+- 未完成正式分镜。
+- 未完成正式字幕。
+- 未完成 Seedance prompt。
+- 未完成 Seedance2.0 prompt。
+- 未完成视频提示词。
+- 未完成图像提示词。
+- 未完成视频生成。
+- 未完成生产稿包。
+
+## 剩余 P2
+
+- 教材版本待确认。
+- 目标年级待确认。
+- 最终时长待确认。
+- 原文采用版本正式化前待确认。
+
+## 是否进入视频链路
+
+否。本轮未进入分镜、Seedance、视频、字幕或生产稿包链路。
+
+## 问题记录
+
+1. safe.directory：启动检查和 Git 操作使用 `git -c safe.directory=C:/Users/Administrator/Desktop/novel-agent-shell-demo ...`；本轮未出现阻断，遗留为环境配置提示。
+2. LF/CRLF：预计 Windows Git 可能提示 LF/CRLF 转换；若出现，仅为环境提示。
+3. 权限、路径、编码问题：本轮未发现权限、路径或 UTF-8 编码问题。
+4. 校验失败后修复：无；本轮校验均通过，未发生失败后修复。
+5. 未运行校验：无；本轮要求的 `git diff --check`、`git status --short`、`validate-edu-shortdrama-project` 和 `validate-shell` 均已运行。
+6. 旧状态文档矛盾：上一轮已最小一致性修正 `PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md`；本轮不修改这些文件。
+7. 潜在越界风险：本轮禁止改 locked 资产、manifest、final-review 和视频链路内容；按允许范围控制。
+8. 质量风险：儿童角色一致性、击瓮水流等视频化风险仍存在，本轮不处理，交给后置 `VIDEO-SKILL`。
+9. remote compact 504：上一轮 `WENYAN-GENERALIZE-005-PHASE8-RUN` 曾因 remote compact 504 中断；已由 `WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER` 恢复并完成。本轮只确认无业务遗留，本轮未复现 504。
+
+## 校验结果
+
+- `git diff --check`：通过；仅有 LF/CRLF 提示，无 whitespace error。
+- `git status --short`：仅包含本轮允许新增 / 修改文件。
+- `bash scripts/validate-edu-shortdrama-project.sh projects/wenyan-generalize-sima-guang-001`：通过，0 error / 0 warning。
+- `bash scripts/validate-shell.sh`：通过，0 error / 0 warning。
+
+## 是否越界
+
+- 未修改 `locked/FINAL-SCRIPT.md`。
+- 未修改 `locked/LOCK-MANIFEST.sha256`。
+- 未修改 `locked/SKILL-LOCK-MANIFEST.sha256`。
+- 未修改 `reviews/final-review.md`。
+- 未修改 `scripts/SMOKE-DRAFT.md`。
+- 未修改 `SOURCE-TEXT.md`、`STORY-SPEC.md`、`OUTLINE.md` 或 `PROJECT.md`。
+- 未修改《两小儿辩日》 locked 资产。
+- 未修改 `wenyan-skill` 核心规则。
+- 未生成正式分镜、正式字幕、Seedance prompt、Seedance2.0 prompt、视频提示词、图像提示词或生产稿包。
+- 未自动启动下一步任务。
+
+## 提交信息
+
+- 计划提交信息：`WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE: freeze sima guang script chain`
+- commit hash：提交后见最终输出。
+- push 结果：提交后见最终输出。
+
+## 下一步建议
+
+候选任务，不得自动执行：
+
+- `VIDEO-SKILL-001-PLAN`
+- `CLEANUP-001-AUDIT`
+- `WENYAN-GENERALIZE-007-THIRD-TEXT-PLAN`
+- `HANDOFF-UPDATE-001`
+
 ## 2026-05-30 WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER
 
 - 任务：恢复并收尾《司马光》Phase 8 剧本文本锁稿任务。

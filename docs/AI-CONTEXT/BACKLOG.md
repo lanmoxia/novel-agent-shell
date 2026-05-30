@@ -352,12 +352,28 @@
 - 验收标准：final-review、FINAL-SCRIPT、LOCK-MANIFEST、SKILL-LOCK-MANIFEST 均可追溯；remaining P2 保留；PROJECT-STATE 记录 locked true 但 productionPackageStatus 仍为 not_generated；不进入视频链路；校验通过并提交推送。
 - 备注：2026-05-30 `WENYAN-GENERALIZE-005-PHASE8-RUN` 执行中因 remote compact 504 Gateway Timeout 中断；`WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER` 已接续恢复并完成。已生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256`、`locked/SKILL-LOCK-MANIFEST.sha256`，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md`。P0=0，P1=0，P2=4；剩余 P2 为教材版本、目标年级、最终时长和原文采用版本正式化前待确认。未生成正式字幕、正式分镜、Seedance prompt、视频提示词、图像提示词或生产稿包；未进入视频链路。
 
-### [ ] WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE：冻结《司马光》剧本创作链路完成状态
+### [x] WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE：冻结《司马光》剧本创作链路完成状态
 
 - 目标：在用户明确确认后，冻结《司马光》剧本创作链路完成状态，明确 Phase 8 剧本文本锁稿已完成，并防止后续自动进入分镜、Seedance 或视频生产链路。
 - 修改范围：待用户确认后再限定；候选范围优先限于 AI-CONTEXT 状态文件、项目状态记录和必要归档。
 - 禁止范围：未确认前不得执行；不得生成正式字幕、正式分镜、Seedance prompt、Seedance2.0 prompt、视频提示词、图像提示词或完整生产稿包；不得修改锁稿剧本文本；不得修改《两小儿辩日》锁稿资产；不得修改 `wenyan-skill` 核心规则。
 - 验收标准：《司马光》剧本创作链路完成状态被清晰冻结；后续视频链路边界清楚；下一步只能作为候选任务，不自动执行。
+- 备注：2026-05-30 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE.md`。本轮新增 `reviews/script-creation-boundary-freeze.md`，更新 `PROJECT-STATE.json`、项目记忆、运行日志和 AI-CONTEXT；未修改 `locked/FINAL-SCRIPT.md`、manifest 或 `reviews/final-review.md`；未进入视频链路，未生成正式分镜、正式字幕、Seedance prompt、视频提示词、图像提示词或生产稿包。
+
+### [ ] WENYAN-GENERALIZE-007-THIRD-TEXT-PLAN：第三篇文言文泛化测试计划
+
+- 目标：在用户明确确认后，选择第三篇文言文文本并制定泛化测试计划，用于继续观察 `wenyan-skill` 在不同结构文本中的剧本创作链路适配能力。
+- 修改范围：待用户确认后再限定；候选范围优先限于计划归档和必要 AI-CONTEXT 状态文件。
+- 禁止范围：未确认前不得执行；不得创建项目；不得生成剧本；不得进入分镜、Seedance、视频、字幕或生产稿包链路；不得修改现有锁稿资产。
+- 验收标准：明确第三篇文本、结构类型、测试目标、允许 / 禁止范围、成功标准和后续 RUN 任务编号。
+- 备注：后续候选任务，当前未启动。
+
+### [ ] HANDOFF-UPDATE-001：更新 ChatGPT 新窗口接力包
+
+- 目标：在用户明确确认后，更新面向 ChatGPT 新窗口的接力包，概括当前两个文言文锁稿样本、冻结边界、剩余 P2 和后续候选任务。
+- 修改范围：待用户确认后再限定；候选范围优先限于接力文档或 AI-CONTEXT 摘要文件。
+- 禁止范围：未确认前不得执行；不得修改锁稿文本、manifest、Skill 核心规则、workflow 或视频链路资产。
+- 验收标准：接力包清楚说明《两小儿辩日》和《司马光》的状态边界，不把完整视频生产链路写成已完成，不把所有文言文类型写成完全验证通过。
 - 备注：后续候选任务，当前未启动。
 
 ### [ ] WENYAN-GENERALIZE-004B-PHASE6-FOLLOWUP-REVISION：根据 Phase 7 发现的 P1 回到 Phase 6 后续修订

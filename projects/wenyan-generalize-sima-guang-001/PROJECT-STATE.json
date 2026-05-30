@@ -6,7 +6,7 @@
   "genreSkill": "wenyan-skill",
   "sourceText": "司马光",
   "phase": 8,
-  "status": "phase8_locked",
+  "status": "phase8_locked_boundary_frozen",
   "locked": true,
   "confirmedArtifacts": {
     "projectMd": true,
@@ -32,6 +32,7 @@
   "subtitleStatus": "not_generated",
   "shotlistStatus": "not_started",
   "reviewStatus": "final_reviewed",
+  "finalReviewStatus": "completed",
   "phase5ReviewStatus": "completed",
   "phase5ReviewFile": "reviews/phase5-teaching-production-review.md",
   "p0Count": 0,
@@ -49,6 +50,12 @@
   "phase8RunAllowed": true,
   "phase8RunStatus": "completed",
   "phase8RunFile": "docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md",
+  "scriptCreationBoundaryStatus": "frozen",
+  "scriptCreationBoundaryFreezeFile": "reviews/script-creation-boundary-freeze.md",
+  "scriptCreationBoundaryArchiveFile": "docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE.md",
+  "lockedScriptStatus": "completed",
+  "lockManifestStatus": "completed",
+  "skillLockManifestStatus": "completed",
   "handledP2": [
     "强化 S01 可观看性和轻微风险预示",
     "优化司马光判断瞬间，使其更短促、更儿童化",
@@ -86,6 +93,7 @@
     "WENYAN-GENERALIZE-005-PHASE8-PLAN completed the Phase 8 lock plan.",
     "WENYAN-GENERALIZE-005-PHASE8-RUN was interrupted by remote compact 504 and recovered by WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER.",
     "Phase 8 script lock completed with final-review, FINAL-SCRIPT, LOCK-MANIFEST, and SKILL-LOCK-MANIFEST.",
+    "WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE froze the script creation boundary after Phase 8 script lock.",
     "No formal subtitles, formal shotlist, Seedance prompts, video prompts, image prompts, or production package generated.",
     "Remaining P2: textbook version, target grade, final duration, and formal source-text version still need user confirmation before formalization."
   ]

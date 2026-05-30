@@ -64,6 +64,7 @@
 - `WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW` 已完成，已生成《司马光》Phase 7 锁稿前审查报告并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW.md`；审查结论为 P0=0、P1=0、P2=4，允许在用户确认后进入 Phase 8 锁稿计划制定；本轮未修订 `SMOKE-DRAFT.md`，未进入 Phase 8，未锁稿，未生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或生产稿包。
 - `WENYAN-GENERALIZE-005-PHASE8-PLAN` 已完成，已制定《司马光》Phase 8 剧本文本锁稿计划并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-PLAN.md`；当前状态为 `phase8_planned`，允许在用户确认后执行 Phase 8 Run；本轮未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md` 或锁稿 manifest，未锁稿，未进入视频链路。
 - `WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER` 已完成，已从 remote compact 504 Gateway Timeout 中断中恢复并完成《司马光》Phase 8 剧本文本锁稿；已生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256`、`locked/SKILL-LOCK-MANIFEST.sha256`，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md`；P0=0、P1=0、P2=4；未进入视频链路，未生成正式字幕、正式分镜、Seedance prompt、视频提示词、图像提示词或生产稿包。
+- `WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE` 已完成，已冻结《司马光》剧本创作链路完成状态，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE.md`；本轮未修改 `locked/FINAL-SCRIPT.md`、manifest 或 `reviews/final-review.md`，未进入视频链路，未生成正式分镜、正式字幕、Seedance prompt、视频提示词、图像提示词或生产稿包。
 
 ## 当前暂停事项
 
@@ -80,7 +81,8 @@
 - 旧项目校验已能跳过 `projects/_template-edu-shortdrama/`，不会再把教辅模板当成真实项目目录检查。
 - 教辅模板已有专用校验脚本，并已接入 Bash / PowerShell 顶层 `validate-shell`。
 - 当前校验链路已覆盖教辅模板结构、教辅字段、真实教辅项目实例和生产稿包边界；真实教辅烟测项目已创建并补齐 Phase 0-4 文件，且已通过匹配其语义的校验。Phase 5 教学与生产审查已经完成，Phase 6 轻量修订及复核已经完成，Phase 7 锁稿前审查已经完成，Phase 8 剧本文本锁稿已经完成，`WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE` 已完成；当前主要状态是文言文教辅短剧剧本创作链路已完成锁稿并收束，当前边界是不进入分镜提示词、不进入 Seedance2.0 提示词、不进入视频生产阶段。
-- 第二篇文言文泛化测试已完成 Phase 8 剧本文本锁稿：测试文本为《司马光》，项目目录为 `projects/wenyan-generalize-sima-guang-001/`，当前状态是 `phase8_locked`。已生成 `final-review`、`FINAL-SCRIPT`、`LOCK-MANIFEST` 和 `SKILL-LOCK-MANIFEST`；P0=0、P1=0、P2=4，剩余 P2 为教材版本、目标年级、最终时长和原文采用版本正式化前待确认。该测试只能写成第二篇不同结构样本完成剧本创作链路锁稿验证，不能写成 `wenyan-skill` 已全泛化验证通过，也不能写成完整短剧生产链路完成。
+- 第二篇文言文泛化测试已完成 Phase 8 剧本文本锁稿并完成剧本创作链路完成状态冻结：测试文本为《司马光》，项目目录为 `projects/wenyan-generalize-sima-guang-001/`，当前状态是 `phase8_locked_boundary_frozen`。已生成 `final-review`、`FINAL-SCRIPT`、`LOCK-MANIFEST` 和 `SKILL-LOCK-MANIFEST`；P0=0、P1=0、P2=4，剩余 P2 为教材版本、目标年级、最终时长和原文采用版本正式化前待确认。当前已有两个文言文剧本创作链路锁稿样本：《两小儿辩日》为争辩型 / 观点证据型，《司马光》为事件危机型 / 行动解困型；`wenyan-skill` 只能写成已完成第二篇不同结构样本的剧本创作链路锁稿验证，不能写成所有文言文类型完全验证通过，也不能写成完整视频生产链路完成。
+- `VIDEO-SKILL-001-PLAN` 仍是后续独立任务，当前未启动；当前仍未进入视频链路。
 - 顶层 `validate-shell.*` 仍保留既有 `.claude/` 探测 warning 逻辑；`VALIDATE-005` 未扩大该探测边界。
 - `projects/_template` 仍作为旧小说 / 剧本模板保留，未被本轮改动。
 - 长期优化任务需要按编号推进，每次只执行一个任务，避免上下文漂移和范围扩大。
@@ -91,10 +93,11 @@
 
 下一步候选方向：
 
-- `WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE`：冻结《司马光》剧本创作链路完成状态。
 - `WENYAN-GENERALIZE-004B-PHASE6-FOLLOWUP-REVISION`：如后续发现 P1，再回到 Phase 6 做后续修订。
 - `VIDEO-SKILL-001-PLAN`：规划分镜 / Seedance2.0 后置 Skill。
 - `CLEANUP-001-AUDIT`：只读仓库清理审计。
+- `WENYAN-GENERALIZE-007-THIRD-TEXT-PLAN`：第三篇文言文泛化测试计划。
+- `HANDOFF-UPDATE-001`：更新 ChatGPT 新窗口接力包。
 
 当前主线剧本创作链路已完成锁稿并收束。后续不得自动进入分镜提示词、Seedance2.0 提示词或视频生产链路；如需推进这些方向，必须另开任务或 Skill。
 
