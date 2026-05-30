@@ -57,6 +57,7 @@
 - `WENYAN-SMOKE-009-PHASE8-PLAN` 已完成，已制定 Phase 8 锁稿计划并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-009-PHASE8-PLAN.md`；本轮未执行 Phase 8，未锁稿，未修改 `PROJECT-STATE.json`，未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、锁稿 manifest、正式字幕、正式分镜、视频提示词或生产稿包。
 - `WENYAN-SMOKE-009-PHASE8-RUN` 已完成，已按用户确认范围执行 Phase 8 剧本文本锁稿并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-009-PHASE8-RUN.md`；本轮新增 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、锁稿 manifest 和 Skill 锁定 manifest；未生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或生产稿包。
 - `WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE` 已完成，已冻结剧本创作链路完成状态并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE.md`；当前主线到此收束，后续不自动进入分镜提示词、Seedance2.0 提示词或视频生产链路。
+- `WENYAN-GENERALIZE-001-PLAN` 已完成，已规划《司马光》作为第二篇文言文泛化测试并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-001-PLAN.md`；本轮只完成计划，未创建《司马光》项目目录，未生成剧本，未进入分镜、Seedance2.0、视频生产、正式字幕或生产稿包链路。
 
 ## 当前暂停事项
 
@@ -73,6 +74,7 @@
 - 旧项目校验已能跳过 `projects/_template-edu-shortdrama/`，不会再把教辅模板当成真实项目目录检查。
 - 教辅模板已有专用校验脚本，并已接入 Bash / PowerShell 顶层 `validate-shell`。
 - 当前校验链路已覆盖教辅模板结构、教辅字段、真实教辅项目实例和生产稿包边界；真实教辅烟测项目已创建并补齐 Phase 0-4 文件，且已通过匹配其语义的校验。Phase 5 教学与生产审查已经完成，Phase 6 轻量修订及复核已经完成，Phase 7 锁稿前审查已经完成，Phase 8 剧本文本锁稿已经完成，`WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE` 已完成；当前主要状态是文言文教辅短剧剧本创作链路已完成锁稿并收束，当前边界是不进入分镜提示词、不进入 Seedance2.0 提示词、不进入视频生产阶段。
+- 第二篇文言文泛化测试已完成计划制定：测试文本暂定为《司马光》，测试目标是验证 `wenyan-skill` 能否从《两小儿辩日》的争辩型 / 观点证据型结构泛化到事件危机型 / 行动解困型结构。该测试尚未执行 RUN，尚未创建 `projects/wenyan-generalize-sima-guang-001/`，不能写成已验证通过。
 - 顶层 `validate-shell.*` 仍保留既有 `.claude/` 探测 warning 逻辑；`VALIDATE-005` 未扩大该探测边界。
 - `projects/_template` 仍作为旧小说 / 剧本模板保留，未被本轮改动。
 - 长期优化任务需要按编号推进，每次只执行一个任务，避免上下文漂移和范围扩大。
@@ -81,7 +83,11 @@
 
 当前不新增自动执行的下一阶段任务。
 
-下一步建议：等待用户确认是否另开 `VIDEO-SKILL-001-PLAN`：规划分镜 / Seedance2.0 提示词 Skill。
+下一步候选方向：
+
+- `WENYAN-GENERALIZE-001-RUN`：正式执行《司马光》第二篇文言文泛化测试。
+- `VIDEO-SKILL-001-PLAN`：规划分镜 / Seedance2.0 后置 Skill。
+- `CLEANUP-001-AUDIT`：只读仓库清理审计。
 
 当前主线剧本创作链路已完成锁稿并收束。后续不得自动进入分镜提示词、Seedance2.0 提示词或视频生产链路；如需推进这些方向，必须另开任务或 Skill。
 
@@ -90,6 +96,7 @@
 - 不得把当前迁移写成已经完成的教辅短剧系统重构。
 - 不得未经用户确认重构 `workflow/`、`scripts/`、`genre-skills/`、`projects/` 或 `projects/_template/`。
 - 不得自动运行 Skill、创建测试项目或生成剧本 / 分镜 / 视频提示词。
+- 不得把《司马光》写成已执行项目、已完成项目或 `wenyan-skill` 已泛化验证通过；当前只完成 PLAN，RUN 必须等待用户确认。
 - 不得把教辅短剧规则硬编码进壳子主流程。
 - 不得把所有长期背景塞进 `AGENTS.md`；长期上下文应维护在 `docs/AI-CONTEXT/`。
 - 不得一次执行多个 backlog 任务，除非用户明确授权。

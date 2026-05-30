@@ -296,6 +296,22 @@
 - 验收标准：当前剧本链路完成状态被清楚冻结；后续如需分镜 / Seedance / 视频生产，必须另开任务或 Skill；不产生新的生产资产。
 - 备注：2026-05-29 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE.md`。当前主线文言文教辅短剧剧本创作链路已完成锁稿并收束；未修改烟测项目文件，未生成字幕、分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或生产稿包。
 
+### [x] WENYAN-GENERALIZE-001-PLAN：规划《司马光》作为第二篇文言文泛化测试
+
+- 目标：在不进入正式创作执行的前提下，规划《司马光》作为第二篇文言文泛化测试，验证 `wenyan-skill` 是否能从《两小儿辩日》的争辩型 / 观点证据型结构泛化到事件危机型 / 行动解困型结构。
+- 修改范围：仅限 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-001-PLAN.md` 以及必要 AI-CONTEXT 状态文件。
+- 禁止范围：不得创建《司马光》项目目录；不得生成剧本、完整分场、完整台词、正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词、锁稿 manifest 或完整生产稿包；不得修改《两小儿辩日》锁稿资产。
+- 验收标准：计划文件明确第二篇泛化测试的必要性、选择《司马光》的理由、两篇文本结构差异、验证能力、不验证能力、下一轮 RUN 项目目录、阶段边界、待确认项和禁止事项；本轮不创建项目、不生成剧本、不进入视频链路。
+- 备注：2026-05-29 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-001-PLAN.md`。本轮只完成计划，未创建 `projects/wenyan-generalize-sima-guang-001/`，未生成《司马光》剧本，未进入分镜、Seedance2.0、视频生产、正式字幕或生产稿包链路。
+
+### [ ] WENYAN-GENERALIZE-001-RUN：正式执行《司马光》第二篇文言文泛化测试
+
+- 目标：在用户明确确认后，按 `WENYAN-GENERALIZE-001-PLAN` 的边界执行《司马光》第二篇文言文泛化测试，验证事件危机型 / 行动解困型文言文的剧本创作链路。
+- 修改范围：待用户确认后再限定；候选范围包括 `projects/wenyan-generalize-sima-guang-001/`、必要运行记录和 AI-CONTEXT 状态文件。
+- 禁止范围：未确认前不得执行；不得复用或覆盖《两小儿辩日》锁稿资产；不得直接锁稿；不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或完整生产稿包；不得修改模板、Skill、workflow 或仓库级 scripts。
+- 验收标准：只生成用户确认范围内的项目建档、原文拆解、Scene 映射、烟测草案或阶段性审查产物；明确是否停在 Phase 4 或 Phase 5；记录待确认项、失败点、未生成产物和后续建议。
+- 备注：待用户另行确认后才可启动；当前未启动。
+
 ### [ ] VIDEO-SKILL-001-PLAN：规划分镜 / Seedance2.0 提示词 Skill
 
 - 目标：在用户另行明确确认后，规划独立的分镜 / Seedance2.0 提示词 Skill，不把视频生产链路并入当前 `wenyan-skill` 剧本创作验证链路。
@@ -303,6 +319,14 @@
 - 禁止范围：未确认前不得执行；不得自动生成正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或完整生产稿包；不得修改当前已锁稿剧本资产。
 - 验收标准：明确新 Skill 的职责、输入、输出、禁止产物、验证方式和与 `wenyan-skill` 剧本链路的边界。
 - 备注：待用户另行确认后才可启动；当前未启动。
+
+### [ ] CLEANUP-001-AUDIT：只读仓库清理审计
+
+- 目标：在用户明确确认后，对仓库进行只读清理审计，识别历史报告、临时产物、已冻结项目资产和可归档对象的边界。
+- 修改范围：默认只输出审计结论；如需落文档、移动、删除或改名，必须另开任务并由用户确认。
+- 禁止范围：不得删除文件；不得修改 `workflow/`、`scripts/`、`genre-skills/`、`projects/`、`projects/_template/`、`projects/_template-edu-shortdrama/` 或已锁稿资产；不得运行生成流程；不得创建项目。
+- 验收标准：列出可保留、可归档、疑似重复、禁止清理和需要用户确认的对象；不产生实际清理动作。
+- 备注：后续候选任务，当前未启动。
 
 ### [x] TEMPLATE-001：评估 projects/_template 是否需要教辅短剧版本
 
