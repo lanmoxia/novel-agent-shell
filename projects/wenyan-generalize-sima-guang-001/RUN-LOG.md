@@ -1,5 +1,129 @@
 # 运行记录
 
+## 2026-05-30 WENYAN-GENERALIZE-005-PHASE8-PLAN
+
+- 任务：制定《司马光》Phase 8 剧本文本锁稿计划。
+- 当前阶段：Phase 8 planned。
+- 当前状态：Phase 8 锁稿计划已完成，Phase 8 Run 未执行。
+- 计划结论：允许在用户确认后执行 Phase 8 Run；本轮未锁稿，未生成 `final-review`、`FINAL-SCRIPT` 或 manifest，未进入视频链路。
+
+## 读取范围
+
+- `docs/AI-CONTEXT/README.md`
+- `docs/AI-CONTEXT/CURRENT-STATE.md`
+- `docs/AI-CONTEXT/BACKLOG.md`
+- `docs/AI-CONTEXT/LAST-TASK.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-001-PLAN.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-001-RUN.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-002-PHASE5-REVIEW.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-003-PHASE6-LIGHT-REVISION.md`
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW.md`
+- `projects/wenyan-generalize-sima-guang-001/PROJECT.md`
+- `projects/wenyan-generalize-sima-guang-001/PROJECT-STATE.json`
+- `projects/wenyan-generalize-sima-guang-001/GENRE-SKILL-LOCK.md`
+- `projects/wenyan-generalize-sima-guang-001/materials/SOURCE-TEXT.md`
+- `projects/wenyan-generalize-sima-guang-001/specs/STORY-SPEC.md`
+- `projects/wenyan-generalize-sima-guang-001/outlines/OUTLINE.md`
+- `projects/wenyan-generalize-sima-guang-001/scripts/SMOKE-DRAFT.md`
+- `projects/wenyan-generalize-sima-guang-001/reviews/phase5-teaching-production-review.md`
+- `projects/wenyan-generalize-sima-guang-001/reviews/phase7-prelock-review.md`
+- `projects/wenyan-generalize-sima-guang-001/revisions/phase6-light-revision-notes.md`
+- `projects/wenyan-generalize-sima-guang-001/PROJECT-MEMORY.md`
+- `projects/wenyan-generalize-sima-guang-001/RUN-LOG.md`
+- `projects/wenyan-smoke-liangxiaor-bianri-001/reviews/final-review.md`
+- `projects/wenyan-smoke-liangxiaor-bianri-001/locked/FINAL-SCRIPT.md`
+- `projects/wenyan-smoke-liangxiaor-bianri-001/locked/LOCK-MANIFEST.sha256`
+- `projects/wenyan-smoke-liangxiaor-bianri-001/locked/SKILL-LOCK-MANIFEST.sha256`
+- `genre-skills/wenyan-skill/SKILL.md`
+
+未读取 `C:\Users\Administrator\.codex\memories\MEMORY.md`、`.claude/` 或 `workflow/settings*.json`。
+
+## 新增文件
+
+- `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-PLAN.md`
+
+## 修改文件
+
+- `PROJECT-STATE.json`
+- `PROJECT-MEMORY.md`
+- `RUN-LOG.md`
+- `docs/AI-CONTEXT/LAST-TASK.md`
+- `docs/AI-CONTEXT/CURRENT-STATE.md`
+- `docs/AI-CONTEXT/BACKLOG.md`
+
+## Phase 8 计划结论
+
+- 允许下一轮在用户确认后执行 `WENYAN-GENERALIZE-005-PHASE8-RUN`。
+- Phase 8 Run 应生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256`、`locked/SKILL-LOCK-MANIFEST.sha256`。
+- Phase 8 Run 应以 `scripts/SMOKE-DRAFT.md` 为主要锁稿来源，参考原文材料、故事规格、大纲、Phase 5 审查、Phase 6 修订记录和 Phase 7 锁稿前审查。
+- Phase 8 Run 不应重新创作新剧本，不应引入新场次、新支线、新角色或新剧情结构。
+- Phase 8 Run 建议对 `PROJECT.md`、`specs/STORY-SPEC.md`、`outlines/OUTLINE.md` 做最小一致性修正，仅限阶段标记、当前状态和边界说明。
+- 剩余 P2 继续保留：教材版本、目标年级、最终时长、原文采用版本正式化前待确认。
+- Phase 8 Run 后也只能说明第二篇泛化样本完成剧本文本锁稿，不能说明 `wenyan-skill` 已完成全部泛化验证。
+
+## 是否允许 Phase 8 Run
+
+允许，但必须等待用户确认。
+
+## 是否锁稿
+
+否。
+
+本轮未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、LOCK-MANIFEST 或 SKILL-LOCK-MANIFEST。
+
+## 是否进入视频链路
+
+否。
+
+本轮未生成正式字幕、正式分镜、Seedance prompts、Seedance2.0 prompt、视频提示词、图像提示词或生产稿包。
+
+## 问题记录
+
+1. safe.directory：直接运行 `git status --short`、`git branch --show-current`、`git log --oneline --all --decorate -10` 时触发 dubious ownership / safe.directory 阻断提示。影响：普通 `git` 命令需显式声明安全目录；处理：使用 `git -c safe.directory=C:/Users/Administrator/Desktop/novel-agent-shell-demo ...` 复跑并通过；遗留：仅环境配置提示。
+2. LF/CRLF：预计 `git diff --check` 或 `git add` 可能提示 LF 将被替换为 CRLF。影响：不影响内容和校验；处理：记录为 Windows Git 换行提示；遗留：仅环境提示。
+3. 权限、路径、编码：未发现权限、路径或 UTF-8 编码问题。
+4. 校验失败后修复：未发生校验失败后修复；`git diff --check`、项目校验、shell 校验均通过。
+5. 未运行校验：无；本轮要求的 `git diff --check`、`git status --short`、`validate-edu-shortdrama-project`、`validate-shell` 均已运行。
+6. 状态文档矛盾：`PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md` 仍保留早期阶段表述；本轮范围不允许修改，Phase 8 Run 计划建议做最小一致性修正。
+7. 旧归档占位：`docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW.md` 的校验结果章节仍保留待最终输出占位；本轮不修改旧归档。
+8. 潜在越界风险：Phase 8 Run 允许生成锁稿资产，但本轮只制定计划；本轮未生成锁稿资产。
+9. 质量风险：儿童角色一致性、击瓮水流等视频化风险仍需后置视频 Skill 控制；本轮不生成视频方案。
+
+## 校验结果
+
+- `git diff --check`：通过；仅有 LF/CRLF 提示，无 whitespace error。
+- `git status --short`：仅包含本轮允许新增 / 修改文件。
+- `bash scripts/validate-edu-shortdrama-project.sh projects/wenyan-generalize-sima-guang-001`：通过，0 error / 0 warning。
+- `bash scripts/validate-shell.sh`：通过，0 error / 0 warning。
+
+## 是否越界
+
+- 未生成 `reviews/final-review.md`。
+- 未生成 `locked/FINAL-SCRIPT.md`。
+- 未生成锁稿 manifest。
+- 未修改 `scripts/SMOKE-DRAFT.md`。
+- 未修改 `PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md`。
+- 未修改 locked 资产。
+- 未生成正式字幕、正式分镜、Seedance prompts、Seedance2.0 prompt、视频提示词、图像提示词或生产稿包。
+- 未修改《两小儿辩日》锁稿资产。
+- 未修改 `wenyan-skill`、workflow、scripts 或模板。
+
+## 提交信息
+
+- 计划提交信息：`WENYAN-GENERALIZE-005-PHASE8-PLAN: plan sima guang script lock`
+- commit hash：提交后见本轮最终输出。
+- push 结果：提交后见本轮最终输出。
+
+## 下一步建议
+
+下一步候选：
+
+```text
+WENYAN-GENERALIZE-005-PHASE8-RUN：执行《司马光》剧本文本锁稿，生成 final-review、FINAL-SCRIPT 和 manifest
+```
+
+不得自动进入下一步，必须等待用户确认。
+
 ## 2026-05-29 WENYAN-GENERALIZE-001-RUN
 
 - 任务：执行《司马光》第二篇文言文泛化测试，推进到 Phase 4 烟测草案。

@@ -336,12 +336,20 @@
 - 验收标准：审查报告明确 P0 / P1 / P2，判断 Phase 6 修订稿是否保持事件危机型结构、原文准确性、白话释义、教学闭环和生产边界；明确是否建议进入 Phase 8 计划；不得自动锁稿或进入视频链路。
 - 备注：2026-05-30 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW.md`。本轮新增 `reviews/phase7-prelock-review.md`；审查结论为 P0=0、P1=0、P2=4，允许在用户确认后进入 Phase 8 锁稿计划制定；未修订 `SMOKE-DRAFT.md`，未进入 Phase 8，未锁稿，未生成视频链路内容。
 
-### [ ] WENYAN-GENERALIZE-005-PHASE8-PLAN：制定《司马光》剧本文本锁稿计划
+### [x] WENYAN-GENERALIZE-005-PHASE8-PLAN：制定《司马光》剧本文本锁稿计划
 
 - 目标：在用户明确确认后，制定《司马光》Phase 8 剧本文本锁稿计划，明确锁稿对象、锁稿产物、剩余 P2 处理方式、允许 / 禁止范围和执行任务边界。
-- 修改范围：待用户确认后再限定；候选范围应优先限于计划归档和必要 AI-CONTEXT 状态文件，不直接生成锁稿产物。
+- 修改范围：`docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-PLAN.md`、`projects/wenyan-generalize-sima-guang-001/PROJECT-STATE.json`、`PROJECT-MEMORY.md`、`RUN-LOG.md` 和必要 AI-CONTEXT 状态文件；不直接生成锁稿产物。
 - 禁止范围：未确认前不得执行；不得直接生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、锁稿 manifest、正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或完整生产稿包；不得修改《两小儿辩日》锁稿资产。
 - 验收标准：明确是否允许进入真正锁稿、锁稿前必须确认或接受为非阻塞的 P2、允许和禁止生成内容、成功标准、暂停规则，以及后续执行任务建议。
+- 备注：2026-05-30 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-PLAN.md`。本轮只制定 Phase 8 锁稿计划；未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md` 或锁稿 manifest，未锁稿，未进入视频链路。计划结论是允许在用户确认后执行 `WENYAN-GENERALIZE-005-PHASE8-RUN`，并建议在 Phase 8 Run 中对 `PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md` 做阶段 / 状态 / 边界说明的最小一致性修正。
+
+### [ ] WENYAN-GENERALIZE-005-PHASE8-RUN：执行《司马光》剧本文本锁稿
+
+- 目标：在用户明确确认后，执行《司马光》Phase 8 剧本文本锁稿，生成 final-review、FINAL-SCRIPT 和锁稿 manifest，并同步项目状态与 AI-CONTEXT。
+- 修改范围：待用户确认后再限定；候选范围包括 `projects/wenyan-generalize-sima-guang-001/reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256`、`locked/SKILL-LOCK-MANIFEST.sha256`、必要项目状态文件、AI-CONTEXT 状态文件和 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md`。如用户确认，也可对 `PROJECT.md`、`specs/STORY-SPEC.md`、`outlines/OUTLINE.md` 做最小一致性修正。
+- 禁止范围：未确认前不得执行；不得重新创作新剧本；不得修改 `scripts/SMOKE-DRAFT.md`；不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或完整生产稿包；不得修改《两小儿辩日》锁稿资产；不得修改 `wenyan-skill` 核心规则。
+- 验收标准：final-review、FINAL-SCRIPT、LOCK-MANIFEST、SKILL-LOCK-MANIFEST 均可追溯；remaining P2 保留；PROJECT-STATE 记录 locked true 但 productionPackageStatus 仍为 not_generated；不进入视频链路；校验通过并提交推送。
 - 备注：后续候选任务，当前未启动。
 
 ### [ ] WENYAN-GENERALIZE-004B-PHASE6-FOLLOWUP-REVISION：根据 Phase 7 发现的 P1 回到 Phase 6 后续修订
