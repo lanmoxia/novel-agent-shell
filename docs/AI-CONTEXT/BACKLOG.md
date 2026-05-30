@@ -328,12 +328,28 @@
 - 验收标准：只处理 Phase 5 审查提出的轻量修订项；保留原文事实链、文言句绑定、白话释义和学习闭环；修订后仍不进入锁稿或视频链路。
 - 备注：2026-05-30 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-003-PHASE6-LIGHT-REVISION.md`。本轮修订 `scripts/SMOKE-DRAFT.md`，新增 `revisions/phase6-light-revision-notes.md`；已处理观看张力、儿童化判断、群儿调度、安全化表达和学习闭环相关 P2；仍保留教材版本、目标年级、最终时长和原文采用版本正式化前待确认；未进入 Phase 7/8，未锁稿，未生成视频链路内容。
 
-### [ ] WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW：对《司马光》Phase 6 修订稿进行锁稿前审查
+### [x] WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW：对《司马光》Phase 6 修订稿进行锁稿前审查
 
 - 目标：在用户明确确认后，对 `projects/wenyan-generalize-sima-guang-001/scripts/SMOKE-DRAFT.md` 的 Phase 6 修订稿进行锁稿前审查，判断是否具备进入 Phase 8 锁稿计划的条件。
 - 修改范围：待用户确认后再限定；候选范围最多包括新增 `projects/wenyan-generalize-sima-guang-001/reviews/phase7-prelock-review.md`、必要的 `PROJECT-STATE.json` 状态更新、项目记忆、运行日志和 AI-CONTEXT 状态文件。
 - 禁止范围：未确认前不得执行；不得生成 `reviews/final-review.md`；不得进入 Phase 8；不得锁稿；不得生成 `locked/FINAL-SCRIPT.md`、锁稿 manifest、正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或完整生产稿包；不得修改《两小儿辩日》锁稿资产。
 - 验收标准：审查报告明确 P0 / P1 / P2，判断 Phase 6 修订稿是否保持事件危机型结构、原文准确性、白话释义、教学闭环和生产边界；明确是否建议进入 Phase 8 计划；不得自动锁稿或进入视频链路。
+- 备注：2026-05-30 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW.md`。本轮新增 `reviews/phase7-prelock-review.md`；审查结论为 P0=0、P1=0、P2=4，允许在用户确认后进入 Phase 8 锁稿计划制定；未修订 `SMOKE-DRAFT.md`，未进入 Phase 8，未锁稿，未生成视频链路内容。
+
+### [ ] WENYAN-GENERALIZE-005-PHASE8-PLAN：制定《司马光》剧本文本锁稿计划
+
+- 目标：在用户明确确认后，制定《司马光》Phase 8 剧本文本锁稿计划，明确锁稿对象、锁稿产物、剩余 P2 处理方式、允许 / 禁止范围和执行任务边界。
+- 修改范围：待用户确认后再限定；候选范围应优先限于计划归档和必要 AI-CONTEXT 状态文件，不直接生成锁稿产物。
+- 禁止范围：未确认前不得执行；不得直接生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、锁稿 manifest、正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或完整生产稿包；不得修改《两小儿辩日》锁稿资产。
+- 验收标准：明确是否允许进入真正锁稿、锁稿前必须确认或接受为非阻塞的 P2、允许和禁止生成内容、成功标准、暂停规则，以及后续执行任务建议。
+- 备注：后续候选任务，当前未启动。
+
+### [ ] WENYAN-GENERALIZE-004B-PHASE6-FOLLOWUP-REVISION：根据 Phase 7 发现的 P1 回到 Phase 6 后续修订
+
+- 目标：如 Phase 7 或后续用户审查发现 P1，在用户明确确认后回到 Phase 6 做后续轻量修订。
+- 修改范围：待用户确认后再限定；候选范围包括 `projects/wenyan-generalize-sima-guang-001/scripts/SMOKE-DRAFT.md`、必要的项目状态文件、项目记忆、运行日志和 AI-CONTEXT 状态文件。
+- 禁止范围：未确认前不得执行；不得进入 Phase 8；不得锁稿；不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或完整生产稿包。
+- 验收标准：只处理 Phase 7 或用户明确提出的 P1，不重写项目，不进入锁稿或视频链路。
 - 备注：后续候选任务，当前未启动。
 
 ### [ ] WENYAN-GENERALIZE-003B-PHASE6-RECHECK：复核《司马光》Phase 6 轻量修订质量

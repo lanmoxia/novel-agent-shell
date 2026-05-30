@@ -5,8 +5,8 @@
   "skillVersion": "0.1.0",
   "genreSkill": "wenyan-skill",
   "sourceText": "司马光",
-  "phase": 6,
-  "status": "phase6_revised",
+  "phase": 7,
+  "status": "phase7_prelock_reviewed",
   "locked": false,
   "confirmedArtifacts": {
     "projectMd": true,
@@ -40,6 +40,10 @@
   "phase6Allowed": true,
   "phase6RevisionStatus": "completed",
   "phase6RevisionFile": "revisions/phase6-light-revision-notes.md",
+  "phase7PrelockReviewStatus": "completed",
+  "phase7PrelockReviewFile": "reviews/phase7-prelock-review.md",
+  "phase8Allowed": true,
+  "phase8Status": "not_started",
   "handledP2": [
     "强化 S01 可观看性和轻微风险预示",
     "优化司马光判断瞬间，使其更短促、更儿童化",
@@ -67,7 +71,9 @@
     "Phase 5 review result: P0=0, P1=0, P2=6; Phase 6 light revision is allowed after user confirmation.",
     "WENYAN-GENERALIZE-003-PHASE6-LIGHT-REVISION completed the Phase 6 light revision.",
     "Phase 6 handled P2 items for watchability, childlike judgment, crowd blocking, safety expression, and learning closure.",
-    "No Phase 7 prelock review or Phase 8 lock has been performed.",
+    "WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW completed the Phase 7 prelock review.",
+    "Phase 7 review result: P0=0, P1=0, P2=4; Phase 8 lock planning is allowed after user confirmation.",
+    "No Phase 8 lock has been performed.",
     "No final-review, FINAL-SCRIPT, lock manifest, formal subtitles, formal shotlist, Seedance prompts, video prompts, image prompts, or production package generated.",
     "Remaining P2: textbook version, target grade, final duration, and formal source-text version still need user confirmation before formalization."
   ]

@@ -5,18 +5,20 @@
 ## 稳定事实
 
 - 篇目为《司马光》。
-- 当前任务为 `WENYAN-GENERALIZE-003-PHASE6-LIGHT-REVISION`。
-- 当前阶段为 Phase 6。
-- 当前状态为 Phase 6 轻量修订已完成。
+- 当前任务为 `WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW`。
+- 当前阶段为 Phase 7。
+- 当前状态为 Phase 7 锁稿前审查已完成。
 - 本项目用于第二篇文言文泛化测试。
 - 本轮验证事件危机型 / 行动解困型结构。
 - 当前未锁稿。
 - 当前未进入视频链路。
 - Phase 5 审查结论为 P0=0、P1=0、P2=6。
 - Phase 6 已处理观看张力、儿童化判断、人物调度、安全表达和学习闭环相关 P2。
+- Phase 7 锁稿前审查结论为 P0=0、P1=0、P2=4。
+- 当前允许在用户确认后进入 Phase 8 锁稿计划制定。
 - 当前仍未锁稿。
 - 当前未进入视频链路。
-- 后续应先做 Phase 7 锁稿前审查，而不是直接锁稿或视频。
+- 后续应先做 Phase 8 锁稿计划制定，而不是直接锁稿或视频。
 
 ## 原文事实
 
@@ -55,6 +57,17 @@
 
 - 教材版本、目标年级、最终时长和原文采用版本仍需正式化前由用户确认。
 
+## Phase 7 审查结论
+
+- P0=0。
+- P1=0。
+- P2=4。
+- 允许进入 Phase 8 锁稿计划制定。
+- 不允许自动进入 Phase 8。
+- 不允许自动锁稿。
+- 当前仍未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md` 或锁稿 manifest。
+- 当前仍未进入正式字幕、正式分镜、Seedance prompt、视频提示词或生产稿包链路。
+
 ## 视频风险记忆
 
 - 儿童角色多镜头稳定性风险。
@@ -66,10 +79,17 @@
 ## 禁止事项
 
 - 不把 `scripts/SMOKE-DRAFT.md` 当作最终剧本。
-- 不跳过 Phase 7 直接进入 Phase 8。
+- 不跳过 Phase 8 计划直接锁稿。
 - 不生成或覆盖 `locked/FINAL-SCRIPT.md`。
 - 不生成 `reviews/final-review.md`。
 - 不生成锁稿 manifest。
 - 不生成正式字幕、正式分镜或视频提示词。
 - 不进入分镜提示词、Seedance2.0 提示词或视频生产阶段。
 - 不为通过校验补旧小说 / 剧本规划文件。
+
+## 问题记录
+
+- safe.directory：本轮 Git 命令使用 `git -c safe.directory=C:/Users/Administrator/Desktop/novel-agent-shell-demo ...`，未触发阻断性错误。
+- LF/CRLF：Windows Git 可能提示 LF 将被替换为 CRLF；这是换行提示，不影响内容和校验。
+- 状态文档矛盾：`PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md` 等早期阶段文件仍保留 Phase 4 / 尚未 Phase 5 等历史表述；本轮范围不允许修改，最新状态以 `PROJECT-STATE.json`、`PROJECT-MEMORY.md`、`RUN-LOG.md` 和 AI-CONTEXT 为准。
+- 质量风险：儿童角色一致性、击瓮水流等视频化风险仍需后置视频 Skill 控制；本轮不生成视频方案。
