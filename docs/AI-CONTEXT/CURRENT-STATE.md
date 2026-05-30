@@ -63,6 +63,7 @@
 - `WENYAN-GENERALIZE-003-PHASE6-LIGHT-REVISION` 已完成，已按 Phase 5 P2 修订《司马光》`SMOKE-DRAFT.md` 并新增 `revisions/phase6-light-revision-notes.md`，归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-003-PHASE6-LIGHT-REVISION.md`；当前状态为 `phase6_revised`，仍未锁稿，未进入 Phase 7/8，未生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或生产稿包。
 - `WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW` 已完成，已生成《司马光》Phase 7 锁稿前审查报告并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW.md`；审查结论为 P0=0、P1=0、P2=4，允许在用户确认后进入 Phase 8 锁稿计划制定；本轮未修订 `SMOKE-DRAFT.md`，未进入 Phase 8，未锁稿，未生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或生产稿包。
 - `WENYAN-GENERALIZE-005-PHASE8-PLAN` 已完成，已制定《司马光》Phase 8 剧本文本锁稿计划并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-PLAN.md`；当前状态为 `phase8_planned`，允许在用户确认后执行 Phase 8 Run；本轮未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md` 或锁稿 manifest，未锁稿，未进入视频链路。
+- `WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER` 已完成，已从 remote compact 504 Gateway Timeout 中断中恢复并完成《司马光》Phase 8 剧本文本锁稿；已生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256`、`locked/SKILL-LOCK-MANIFEST.sha256`，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md`；P0=0、P1=0、P2=4；未进入视频链路，未生成正式字幕、正式分镜、Seedance prompt、视频提示词、图像提示词或生产稿包。
 
 ## 当前暂停事项
 
@@ -79,7 +80,7 @@
 - 旧项目校验已能跳过 `projects/_template-edu-shortdrama/`，不会再把教辅模板当成真实项目目录检查。
 - 教辅模板已有专用校验脚本，并已接入 Bash / PowerShell 顶层 `validate-shell`。
 - 当前校验链路已覆盖教辅模板结构、教辅字段、真实教辅项目实例和生产稿包边界；真实教辅烟测项目已创建并补齐 Phase 0-4 文件，且已通过匹配其语义的校验。Phase 5 教学与生产审查已经完成，Phase 6 轻量修订及复核已经完成，Phase 7 锁稿前审查已经完成，Phase 8 剧本文本锁稿已经完成，`WENYAN-SMOKE-010-SCRIPT-CREATION-BOUNDARY-FREEZE` 已完成；当前主要状态是文言文教辅短剧剧本创作链路已完成锁稿并收束，当前边界是不进入分镜提示词、不进入 Seedance2.0 提示词、不进入视频生产阶段。
-- 第二篇文言文泛化测试已执行到 Phase 8 planned：测试文本为《司马光》，项目目录为 `projects/wenyan-generalize-sima-guang-001/`，当前状态是 `phase8_planned`。Phase 8 Run 允许在用户确认后执行；《司马光》仍未锁稿，仍未生成 `final-review`、`FINAL-SCRIPT` 或 manifest，仍未进入视频链路。该测试正在验证 `wenyan-skill` 能否从《两小儿辩日》的争辩型 / 观点证据型结构泛化到事件危机型 / 行动解困型结构；当前只能写成第二篇泛化验证进行中，不能写成 `wenyan-skill` 已全泛化验证通过。
+- 第二篇文言文泛化测试已完成 Phase 8 剧本文本锁稿：测试文本为《司马光》，项目目录为 `projects/wenyan-generalize-sima-guang-001/`，当前状态是 `phase8_locked`。已生成 `final-review`、`FINAL-SCRIPT`、`LOCK-MANIFEST` 和 `SKILL-LOCK-MANIFEST`；P0=0、P1=0、P2=4，剩余 P2 为教材版本、目标年级、最终时长和原文采用版本正式化前待确认。该测试只能写成第二篇不同结构样本完成剧本创作链路锁稿验证，不能写成 `wenyan-skill` 已全泛化验证通过，也不能写成完整短剧生产链路完成。
 - 顶层 `validate-shell.*` 仍保留既有 `.claude/` 探测 warning 逻辑；`VALIDATE-005` 未扩大该探测边界。
 - `projects/_template` 仍作为旧小说 / 剧本模板保留，未被本轮改动。
 - 长期优化任务需要按编号推进，每次只执行一个任务，避免上下文漂移和范围扩大。
@@ -90,7 +91,7 @@
 
 下一步候选方向：
 
-- `WENYAN-GENERALIZE-005-PHASE8-RUN`：执行《司马光》剧本文本锁稿，生成 final-review、FINAL-SCRIPT 和 manifest。
+- `WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE`：冻结《司马光》剧本创作链路完成状态。
 - `WENYAN-GENERALIZE-004B-PHASE6-FOLLOWUP-REVISION`：如后续发现 P1，再回到 Phase 6 做后续修订。
 - `VIDEO-SKILL-001-PLAN`：规划分镜 / Seedance2.0 后置 Skill。
 - `CLEANUP-001-AUDIT`：只读仓库清理审计。
@@ -102,7 +103,7 @@
 - 不得把当前迁移写成已经完成的教辅短剧系统重构。
 - 不得未经用户确认重构 `workflow/`、`scripts/`、`genre-skills/`、`projects/` 或 `projects/_template/`。
 - 不得自动运行 Skill、创建测试项目或生成剧本 / 分镜 / 视频提示词。
-- 不得把《司马光》写成已锁稿项目、已完成正式项目或 `wenyan-skill` 已全泛化验证通过；当前只完成到 Phase 8 planned，Phase 8 Run 必须等待用户确认。
+- 不得把《司马光》写成已完成正式项目、完整短剧生产链路已完成或 `wenyan-skill` 已全泛化验证通过；当前只完成到 Phase 8 剧本文本锁稿，仍未进入视频链路。
 - 不得把教辅短剧规则硬编码进壳子主流程。
 - 不得把所有长期背景塞进 `AGENTS.md`；长期上下文应维护在 `docs/AI-CONTEXT/`。
 - 不得一次执行多个 backlog 任务，除非用户明确授权。

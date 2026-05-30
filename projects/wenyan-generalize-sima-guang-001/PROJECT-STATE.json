@@ -6,8 +6,8 @@
   "genreSkill": "wenyan-skill",
   "sourceText": "司马光",
   "phase": 8,
-  "status": "phase8_planned",
-  "locked": false,
+  "status": "phase8_locked",
+  "locked": true,
   "confirmedArtifacts": {
     "projectMd": true,
     "genreSkillLock": true,
@@ -21,17 +21,17 @@
     "subtitlePlan": false,
     "shotlistPlan": false,
     "teachingReview": true,
-    "finalReview": false,
+    "finalReview": true,
     "revisionLog": true,
-    "finalScript": false,
+    "finalScript": true,
     "productionPackage": false
   },
   "eduTextStatus": "completed_smoke",
   "sceneMappingStatus": "completed_smoke",
-  "scriptStatus": "phase6_revised",
+  "scriptStatus": "phase8_locked",
   "subtitleStatus": "not_generated",
   "shotlistStatus": "not_started",
-  "reviewStatus": "phase5_reviewed",
+  "reviewStatus": "final_reviewed",
   "phase5ReviewStatus": "completed",
   "phase5ReviewFile": "reviews/phase5-teaching-production-review.md",
   "p0Count": 0,
@@ -43,11 +43,12 @@
   "phase7PrelockReviewStatus": "completed",
   "phase7PrelockReviewFile": "reviews/phase7-prelock-review.md",
   "phase8Allowed": true,
-  "phase8Status": "planned",
+  "phase8Status": "locked",
   "phase8PlanStatus": "completed",
   "phase8PlanFile": "docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-PLAN.md",
   "phase8RunAllowed": true,
-  "phase8RunStatus": "not_started",
+  "phase8RunStatus": "completed",
+  "phase8RunFile": "docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md",
   "handledP2": [
     "强化 S01 可观看性和轻微风险预示",
     "优化司马光判断瞬间，使其更短促、更儿童化",
@@ -58,7 +59,12 @@
   "productionPackageStatus": "not_generated",
   "videoStatus": "not_started",
   "seedancePromptStatus": "not_started",
-  "lockedArtifacts": [],
+  "lockedArtifacts": [
+    "reviews/final-review.md",
+    "locked/FINAL-SCRIPT.md",
+    "locked/LOCK-MANIFEST.sha256",
+    "locked/SKILL-LOCK-MANIFEST.sha256"
+  ],
   "remainingP2": [
     "教材版本待确认",
     "目标年级待确认",
@@ -69,7 +75,7 @@
   "notes": [
     "WENYAN-GENERALIZE-001-RUN created the second wenyan generalization test project.",
     "Test text is temporarily set to a common Tongbian-style short version of Sima Guang.",
-    "Current phase is Phase 8 planned; no lock has been performed.",
+    "Current phase is Phase 8 locked; the script text has been locked.",
     "This project tests event-crisis and action-solution structure, not debate or viewpoint-evidence structure.",
     "WENYAN-GENERALIZE-002-PHASE5-REVIEW completed the Phase 5 teaching and production review.",
     "Phase 5 review result: P0=0, P1=0, P2=6; Phase 6 light revision is allowed after user confirmation.",
@@ -78,9 +84,9 @@
     "WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW completed the Phase 7 prelock review.",
     "Phase 7 review result: P0=0, P1=0, P2=4; Phase 8 lock planning is allowed after user confirmation.",
     "WENYAN-GENERALIZE-005-PHASE8-PLAN completed the Phase 8 lock plan.",
-    "Phase 8 Run is allowed only after user confirmation; recommended scope includes final-review, FINAL-SCRIPT, lock manifests, and minimal consistency fixes for PROJECT.md, STORY-SPEC.md, and OUTLINE.md.",
-    "No Phase 8 lock has been performed.",
-    "No final-review, FINAL-SCRIPT, lock manifest, formal subtitles, formal shotlist, Seedance prompts, video prompts, image prompts, or production package generated.",
+    "WENYAN-GENERALIZE-005-PHASE8-RUN was interrupted by remote compact 504 and recovered by WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER.",
+    "Phase 8 script lock completed with final-review, FINAL-SCRIPT, LOCK-MANIFEST, and SKILL-LOCK-MANIFEST.",
+    "No formal subtitles, formal shotlist, Seedance prompts, video prompts, image prompts, or production package generated.",
     "Remaining P2: textbook version, target grade, final duration, and formal source-text version still need user confirmation before formalization."
   ]
 }

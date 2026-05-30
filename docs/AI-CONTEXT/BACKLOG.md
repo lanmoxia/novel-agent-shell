@@ -344,12 +344,20 @@
 - 验收标准：明确是否允许进入真正锁稿、锁稿前必须确认或接受为非阻塞的 P2、允许和禁止生成内容、成功标准、暂停规则，以及后续执行任务建议。
 - 备注：2026-05-30 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-PLAN.md`。本轮只制定 Phase 8 锁稿计划；未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md` 或锁稿 manifest，未锁稿，未进入视频链路。计划结论是允许在用户确认后执行 `WENYAN-GENERALIZE-005-PHASE8-RUN`，并建议在 Phase 8 Run 中对 `PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md` 做阶段 / 状态 / 边界说明的最小一致性修正。
 
-### [ ] WENYAN-GENERALIZE-005-PHASE8-RUN：执行《司马光》剧本文本锁稿
+### [x] WENYAN-GENERALIZE-005-PHASE8-RUN：执行《司马光》剧本文本锁稿
 
 - 目标：在用户明确确认后，执行《司马光》Phase 8 剧本文本锁稿，生成 final-review、FINAL-SCRIPT 和锁稿 manifest，并同步项目状态与 AI-CONTEXT。
 - 修改范围：待用户确认后再限定；候选范围包括 `projects/wenyan-generalize-sima-guang-001/reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256`、`locked/SKILL-LOCK-MANIFEST.sha256`、必要项目状态文件、AI-CONTEXT 状态文件和 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md`。如用户确认，也可对 `PROJECT.md`、`specs/STORY-SPEC.md`、`outlines/OUTLINE.md` 做最小一致性修正。
 - 禁止范围：未确认前不得执行；不得重新创作新剧本；不得修改 `scripts/SMOKE-DRAFT.md`；不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或完整生产稿包；不得修改《两小儿辩日》锁稿资产；不得修改 `wenyan-skill` 核心规则。
 - 验收标准：final-review、FINAL-SCRIPT、LOCK-MANIFEST、SKILL-LOCK-MANIFEST 均可追溯；remaining P2 保留；PROJECT-STATE 记录 locked true 但 productionPackageStatus 仍为 not_generated；不进入视频链路；校验通过并提交推送。
+- 备注：2026-05-30 `WENYAN-GENERALIZE-005-PHASE8-RUN` 执行中因 remote compact 504 Gateway Timeout 中断；`WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER` 已接续恢复并完成。已生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md`、`locked/LOCK-MANIFEST.sha256`、`locked/SKILL-LOCK-MANIFEST.sha256`，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md`。P0=0，P1=0，P2=4；剩余 P2 为教材版本、目标年级、最终时长和原文采用版本正式化前待确认。未生成正式字幕、正式分镜、Seedance prompt、视频提示词、图像提示词或生产稿包；未进入视频链路。
+
+### [ ] WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE：冻结《司马光》剧本创作链路完成状态
+
+- 目标：在用户明确确认后，冻结《司马光》剧本创作链路完成状态，明确 Phase 8 剧本文本锁稿已完成，并防止后续自动进入分镜、Seedance 或视频生产链路。
+- 修改范围：待用户确认后再限定；候选范围优先限于 AI-CONTEXT 状态文件、项目状态记录和必要归档。
+- 禁止范围：未确认前不得执行；不得生成正式字幕、正式分镜、Seedance prompt、Seedance2.0 prompt、视频提示词、图像提示词或完整生产稿包；不得修改锁稿剧本文本；不得修改《两小儿辩日》锁稿资产；不得修改 `wenyan-skill` 核心规则。
+- 验收标准：《司马光》剧本创作链路完成状态被清晰冻结；后续视频链路边界清楚；下一步只能作为候选任务，不自动执行。
 - 备注：后续候选任务，当前未启动。
 
 ### [ ] WENYAN-GENERALIZE-004B-PHASE6-FOLLOWUP-REVISION：根据 Phase 7 发现的 P1 回到 Phase 6 后续修订

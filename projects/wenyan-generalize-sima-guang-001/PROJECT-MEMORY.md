@@ -5,20 +5,20 @@
 ## 稳定事实
 
 - 篇目为《司马光》。
-- 当前任务为 `WENYAN-GENERALIZE-005-PHASE8-PLAN`。
-- 当前阶段为 Phase 8 planned。
-- 当前状态为 Phase 8 锁稿计划已完成，Phase 8 Run 未执行。
+- 当前任务为 `WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER`。
+- 当前阶段为 Phase 8 locked。
+- 当前状态为 Phase 8 剧本文本锁稿已完成。
 - 本项目用于第二篇文言文泛化测试。
 - 本轮验证事件危机型 / 行动解困型结构。
-- 当前未锁稿。
+- 当前已完成剧本文本锁稿。
 - 当前未进入视频链路。
 - Phase 5 审查结论为 P0=0、P1=0、P2=6。
 - Phase 6 已处理观看张力、儿童化判断、人物调度、安全表达和学习闭环相关 P2。
 - Phase 7 锁稿前审查结论为 P0=0、P1=0、P2=4。
-- 当前允许在用户确认后进入 Phase 8 Run。
-- 当前仍未锁稿。
+- 原 `WENYAN-GENERALIZE-005-PHASE8-RUN` 因 remote compact 504 Gateway Timeout 中断。
+- 本轮 `WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER` 已接续恢复并完成锁稿。
 - 当前未进入视频链路。
-- 后续应先执行 Phase 8 Run，生成剧本文本锁稿资产；不得跳过用户确认直接锁稿或进入视频链路。
+- 后续候选是 `WENYAN-GENERALIZE-006-SCRIPT-CREATION-BOUNDARY-FREEZE`，不得自动进入视频链路。
 
 ## 原文事实
 
@@ -80,10 +80,25 @@
   - `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-005-PHASE8-RUN.md`
 - Phase 8 Run 可更新 `PROJECT-STATE.json`、`PROJECT-MEMORY.md`、`RUN-LOG.md` 和 AI-CONTEXT 状态文件。
 - 建议 Phase 8 Run 对 `PROJECT.md`、`specs/STORY-SPEC.md`、`outlines/OUTLINE.md` 做最小一致性修正，仅限阶段标记、当前状态和边界说明，不改原文、剧情结构或 Scene 映射。
-- 当前未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md` 或锁稿 manifest。
-- 当前未锁稿。
+- 计划任务完成时尚未生成 `reviews/final-review.md`、`locked/FINAL-SCRIPT.md` 或锁稿 manifest。
+- 计划任务完成时尚未锁稿；恢复任务已完成锁稿，最新状态见下一节。
 - 当前未进入视频链路。
 - Phase 8 Run 完成后也只能写成第二篇泛化样本完成剧本文本锁稿，不能写成 `wenyan-skill` 已完成全部泛化验证。
+
+## Phase 8 锁稿恢复结论
+
+- `WENYAN-GENERALIZE-005-PHASE8-RUN` 在生成锁稿资产过程中因 remote compact 504 Gateway Timeout 中断。
+- 该问题不是业务校验失败，而是远程 compact / 网络超时。
+- 本轮 `WENYAN-GENERALIZE-005-PHASE8-RUN-RECOVER` 接续恢复，没有从零重写剧本。
+- 已生成并保留 `reviews/final-review.md`。
+- 已生成并保留 `locked/FINAL-SCRIPT.md`。
+- 已生成 `locked/LOCK-MANIFEST.sha256`。
+- 已生成 `locked/SKILL-LOCK-MANIFEST.sha256`。
+- `PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md` 已完成最小一致性修正。
+- `PROJECT-STATE.json` 已更新为 `phase8_locked`、`locked: true`。
+- P0=0，P1=0，P2=4。
+- 剩余 P2 为教材版本待确认、目标年级待确认、最终时长待确认、原文采用版本正式化前待确认。
+- 未生成正式字幕、正式分镜、Seedance prompt、视频提示词、图像提示词或生产稿包。
 
 ## 视频风险记忆
 
@@ -95,11 +110,9 @@
 
 ## 禁止事项
 
-- 不把 `scripts/SMOKE-DRAFT.md` 当作最终剧本。
-- 不跳过用户确认直接执行 Phase 8 Run。
-- 不生成或覆盖 `locked/FINAL-SCRIPT.md`。
-- 不生成 `reviews/final-review.md`。
-- 不生成锁稿 manifest。
+- 不修改 `scripts/SMOKE-DRAFT.md`。
+- 不重新从零生成整套剧本。
+- 不覆盖本轮锁定资产，除非后续任务明确授权修订。
 - 不生成正式字幕、正式分镜或视频提示词。
 - 不进入分镜提示词、Seedance2.0 提示词或视频生产阶段。
 - 不为通过校验补旧小说 / 剧本规划文件。
@@ -108,6 +121,7 @@
 
 - safe.directory：直接运行普通 Git 命令时触发 dubious ownership / safe.directory 阻断提示；已使用 `git -c safe.directory=C:/Users/Administrator/Desktop/novel-agent-shell-demo ...` 复跑并通过。
 - LF/CRLF：Windows Git 可能提示 LF 将被替换为 CRLF；这是换行提示，不影响内容和校验。
-- 状态文档矛盾：`PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md` 等早期阶段文件仍保留 Phase 4 / 尚未 Phase 5 等历史表述；本轮范围不允许修改，Phase 8 Run 计划建议做最小一致性修正，最新状态以 `PROJECT-STATE.json`、`PROJECT-MEMORY.md`、`RUN-LOG.md` 和 AI-CONTEXT 为准。
+- remote compact 504 Gateway Timeout：上一轮 Phase 8 Run 中断，留下半成品；本轮已检查工作区、补齐缺失文件、完成校验和提交；无业务遗留。
+- 状态文档矛盾：`PROJECT.md`、`STORY-SPEC.md`、`OUTLINE.md` 旧阶段表述已做最小一致性修正。
 - 旧归档占位：`docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-004-PHASE7-PRELOCK-REVIEW.md` 的校验结果章节仍保留待最终输出占位；本轮不修改旧归档。
 - 质量风险：儿童角色一致性、击瓮水流等视频化风险仍需后置视频 Skill 控制；本轮不生成视频方案。
