@@ -304,13 +304,29 @@
 - 验收标准：计划文件明确第二篇泛化测试的必要性、选择《司马光》的理由、两篇文本结构差异、验证能力、不验证能力、下一轮 RUN 项目目录、阶段边界、待确认项和禁止事项；本轮不创建项目、不生成剧本、不进入视频链路。
 - 备注：2026-05-29 已完成，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-001-PLAN.md`。本轮只完成计划，未创建 `projects/wenyan-generalize-sima-guang-001/`，未生成《司马光》剧本，未进入分镜、Seedance2.0、视频生产、正式字幕或生产稿包链路。
 
-### [ ] WENYAN-GENERALIZE-001-RUN：正式执行《司马光》第二篇文言文泛化测试
+### [x] WENYAN-GENERALIZE-001-RUN：正式执行《司马光》第二篇文言文泛化测试
 
 - 目标：在用户明确确认后，按 `WENYAN-GENERALIZE-001-PLAN` 的边界执行《司马光》第二篇文言文泛化测试，验证事件危机型 / 行动解困型文言文的剧本创作链路。
 - 修改范围：待用户确认后再限定；候选范围包括 `projects/wenyan-generalize-sima-guang-001/`、必要运行记录和 AI-CONTEXT 状态文件。
 - 禁止范围：未确认前不得执行；不得复用或覆盖《两小儿辩日》锁稿资产；不得直接锁稿；不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 提示词、图像提示词或完整生产稿包；不得修改模板、Skill、workflow 或仓库级 scripts。
 - 验收标准：只生成用户确认范围内的项目建档、原文拆解、Scene 映射、烟测草案或阶段性审查产物；明确是否停在 Phase 4 或 Phase 5；记录待确认项、失败点、未生成产物和后续建议。
+- 备注：2026-05-29 已完成阶段执行，并归档到 `docs/AI-CONTEXT/archive/WENYAN-GENERALIZE-001-RUN.md`。本轮创建 `projects/wenyan-generalize-sima-guang-001/` 并推进到 Phase 4 烟测草案；未进入 Phase 5/6/7/8，未锁稿，未生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或生产稿包。
+
+### [ ] WENYAN-GENERALIZE-002-PHASE5-REVIEW：对《司马光》Phase 4 烟测草案进行教学与生产审查
+
+- 目标：在用户明确确认后，对 `projects/wenyan-generalize-sima-guang-001/scripts/SMOKE-DRAFT.md` 进行 Phase 5 教学与生产审查，判断《司马光》事件危机型 / 行动解困型结构是否合格。
+- 修改范围：待用户确认后再限定；候选范围最多包括 `projects/wenyan-generalize-sima-guang-001/reviews/phase5-teaching-production-review.md`、必要的 `PROJECT-STATE.json` 状态更新、项目运行记录和 AI-CONTEXT 状态文件。
+- 禁止范围：未确认前不得执行；不得生成 `reviews/final-review.md`；不得进入 Phase 6/7/8；不得锁稿；不得生成正式字幕、正式分镜、视频提示词、Seedance prompts、Seedance2.0 prompt、图像提示词或完整生产稿包；不得修改《两小儿辩日》锁稿资产。
+- 验收标准：审查报告明确 P0 / P1 / P2，判断草案是否保持事件危机型结构、原文准确性、白话释义、教学闭环和生产边界；明确是否建议轻量修订或进入下一阶段；不得自动修订或锁稿。
 - 备注：待用户另行确认后才可启动；当前未启动。
+
+### [ ] WENYAN-GENERALIZE-001-REVISION：按审查或用户反馈轻量修订《司马光》Phase 4 烟测草案
+
+- 目标：如 Phase 4 草案存在明显问题，或后续 Phase 5 审查提出 P1 / P2 修订项，在用户明确确认后进行轻量修订。
+- 修改范围：待用户确认后再限定；候选范围包括 `projects/wenyan-generalize-sima-guang-001/scripts/SMOKE-DRAFT.md`、`outlines/OUTLINE.md`、`PROJECT-MEMORY.md`、`RUN-LOG.md` 和必要状态文件。
+- 禁止范围：未确认前不得执行；不得扩大到锁稿、正式字幕、正式分镜、Seedance prompt、视频提示词或生产稿包；不得修改 `wenyan-skill`、workflow、scripts 或《两小儿辩日》锁稿资产。
+- 验收标准：只处理明确问题，不重写为新任务；修订后仍停留在用户确认的阶段边界内，并记录未生成产物。
+- 备注：后续候选任务，当前未启动。
 
 ### [ ] VIDEO-SKILL-001-PLAN：规划分镜 / Seedance2.0 提示词 Skill
 
